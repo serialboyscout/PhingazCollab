@@ -3,10 +3,11 @@
     and commit to github.'''
     
 ''' Looks good G!! JJB-123 '''
+
+import random
     
-    
-intTest = 3
+intTest = random.randint(0,100)
    
 print(intTest)
 
-
+print 'Check out this integer: %d' % intTest
