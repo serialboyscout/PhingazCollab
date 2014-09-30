@@ -16,9 +16,23 @@ def OddorEven(n):
         print 'The integer is Odd!'
         return 
 
+#Class testing - Here I'll define a class
+class User:
+    # Create the User Name - Passing the name into the Function
+    def createUserName(self, Name):
+        self.Name = Name
+    # Returning the User's Name
+    def returnUserName(self):
+        return self.Name
+    # Create the User Age - Passing the age into the Function
+    def createUserAge(self, Age):
+        self.Age = Age
+    # Returning the User's Age
+    def returnUserAge(self):
+        return self.Age
+    
 
 '''MAIN START'''
-    
 import random
     
 intTest = random.randint(0,100)
@@ -35,3 +49,21 @@ OddorEven(intTest)
 print(intTest)
 
 print 'Check out this integer: %d' % intTest
+
+
+''' Class code is below here '''
+# Creating some Class instances - First 'Jason' Object
+Jason = User()
+# Pass the name to the Class for the Name variable
+Jason.createUserName('Jason')
+# Pass the age to the Class Object Jason for the Age variable
+Jason.createUserAge(30)
+# Return both of them
+print 'Hello, my name is %s' %Jason.returnUserName() 
+print 'I am %d' %Jason.returnUserAge()
+# Do math with a Class Variable 
+print 'In 10 years I will be %d' %(Jason.returnUserAge() + 10)
+
+
+
+
