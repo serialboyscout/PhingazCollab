@@ -99,5 +99,52 @@ print Jason.returnUserHeight()
 Jason.returnBMI()
 
 
+class danesobject ():
+    def __init__ (self):
+        self.name = ""
+        self.height = ""
+        self.age = ""
+        self.weight = ""
+
+    def username(self, Name):
+        self.name = Name[0]
+        return self.name
+    
+    def userheight(self, Height):
+        self.height = Height[1]
+        return self.height
+    
+    def userage(self, Age):
+        self.age = Age[2]
+        return self.age
+    
+    def userweight(self, Weight):
+        self.weight = Weight[3]
+        return self.weight
+    
+    def userinfo(self, user):
+        self.userinfo = "Hi %s! You have set your height = %s, age = %s and weight = %s." %(user[0], user[1], user[2], user[3])
+        return self.userinfo
+    
+dtest = danesobject()
+
+dane = ["Dane", 17000, 29, 185]
+
+print dtest.userinfo(dane)
+print dtest.username(dane)
+print dtest.userheight(dane)
+print dtest.userage(dane)
+print dtest.userweight(dane)
+
+
+
+
+
+
+
+
+
+
+
 
 
