@@ -3,7 +3,9 @@
     and commit to github.'''
 from boto.dynamodb.condition import NULL
     
-''' Looks good G!! JJB-123 '''
+''' GUI Imports '''
+from Tkinter import *
+import tkMessageBox
 
 
 
@@ -19,6 +21,8 @@ def OddorEven(n):
 
 #Class testing - Here I'll define a class
 class User:
+    def __init__(self, setName):
+        self.Name = setName
     # Create the User Name - Passing the name into the Function
     def setUserName(self, Name):
         self.Name = Name
@@ -77,7 +81,7 @@ print 'Check out this integer: %d' % intTest
 
 ''' Class code is below here '''
 # Creating some Class instances - First 'Jason' Object
-Jason = User()
+Jason = User('Jason')
 # Pass the name to the Class for the Name variable
 Jason.setUserName('Jason')
 # Pass the age to the Class Object Jason for the Age variable
@@ -136,8 +140,26 @@ print dtest.userheight(dane)
 print dtest.userage(dane)
 print dtest.userweight(dane)
 
+''' Create User Class '''
+def setUser():
+    newUser = userNameInput.get()
+    User(newUser)
+    
+''' Pop-Up Window/GUI for User Input'''
 
+uGUI = Tk()
+userNameInput = StringVar()
 
+uGUI.geometry('400x400')
+uGUI.title('Create User Profile')
+
+uLabel = Label(uGUI, text = 'Please Input Your Name: ').pack()
+
+uName = Entry(uGUI, textvariable=userNameInput).pack()
+
+uButton = Button(uGUI, text = 'Create User',command = setUser).pack()
+
+uGUI.mainloop()
 
 
 
